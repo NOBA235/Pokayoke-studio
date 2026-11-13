@@ -1,0 +1,30 @@
+{
+  "name": "pokayoke-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PokaYoke Studio (Kinetic SOP) - Cloud-Compiled Visual Assembly & Mistake-Proofing Workstation",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^13.3.0",
+    "idb": "^8.0.4",
+    "lucide-react": "^1.72.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}
