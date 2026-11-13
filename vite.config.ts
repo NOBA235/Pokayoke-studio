@@ -9,9 +9,18 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          firebase: ['firebase/app', 'firebase/ai', 'firebase/app-check'],
-          vendor: ['react', 'react-dom', 'idb', 'lucide-react']
+        manualChunks(id: string): string | undefined {
+          if (id.includes('node_modules/firebase') || id.includes('node_modules/@firebase')) {
+            return 'firebase';
+          }
+          if (
+            id.includes('node_modules/react') ||
+            id.includes('node_modules/idb') ||
+            id.includes('node_modules/lucide-react')
+          ) {
+            return 'vendor';
+          }
+          return undefined;
         }
       }
     }
